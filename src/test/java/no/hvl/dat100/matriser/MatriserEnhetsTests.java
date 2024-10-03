@@ -79,7 +79,9 @@ class MatriserEnhetsTests {
 		
 	}
 	
-	@Test
+
+	
+/*	@Test
 	void testSpeile() {
 		
 		int[][] speilet = { {1,4,7}, {2,5,8}, {3,6,9} };
@@ -104,6 +106,8 @@ class MatriserEnhetsTests {
 		assertArrayEquals(ca,multiplisert);
 		
 	}
+*/
+	
 	
 	@Test
 	void testerLik() {

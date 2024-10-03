@@ -7,7 +7,6 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 		
-		//throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 		// som kan skrive ut en tabell med heltall. Du kan selv bestemme formatet.
 		
 		System.out.print("[ ");
@@ -23,20 +22,35 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 		
-		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+
 		//som kan returnere en tekststreng (String) med innholdet av en tabell. For en tabell med 
 		//elementene 42,67,89 skal følgende streng returneres: "[42,67,89]"
 		
-		System.out.println(Arrays.toString(tabell));
+		//gir en tabell med mellomrom
+//		System.out.println(Arrays.toString(tabell));
+//		return (Arrays.toString(tabell));
 		
-		return (Arrays.toString(tabell));
-
+		
+		//gir en tabell uten mellomrom
+		StringBuilder tabellString = new StringBuilder("[");
+		
+		for (int i = 0; i < tabell.length; i++) {
+			tabellString.append(tabell[i]);
+			
+			if (i < tabell.length -1) {
+				tabellString.append(",");
+			}
+		}
+		
+		tabellString.append("]");
+		
+		return tabellString.toString();
 		
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
-		//throw new UnsupportedOperationException("Metoden summer ikke implementert");
+
 		//som gitt en tabell av heltall som parameter beregner summen av tallene som er lagret i tabellen.
 		
 		int total = 0;  
@@ -52,7 +66,7 @@ public class Tabeller {
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-		//throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+
 		//som gitt en tabell og et tall returnerer true om tabellen tabell innholder tallet tall og false ellers.
 		
 		boolean funnet = false;
@@ -74,7 +88,7 @@ public class Tabeller {
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-		//throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+
 		//som returnerer det første index (posisjon) i tabell som inneholder tallet tall og -1 ellers.
 		
 		int i = 0;
@@ -97,7 +111,6 @@ public class Tabeller {
 	// f)
 	public static int[] reverser(int[] tabell) {
 		
-		//throw new UnsupportedOperationException("Metoden reverser ikke implementert");
 		//som gitt en tabell av heltall returnerer en ny tabell som har de samme elementene som tabell men i modsatt rekkefølge.
 		//* Jeg tenker en for løkke som starter på slutten og går oppover
 		
@@ -116,7 +129,6 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		//throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
 		//som kan avgjøre om en tabell av heiltal er sortert stigande (dvs. at alle tal skal vere større enn det forrige)
 		//*en if loop som tester om tallet etter er større enn tallet før. må ha en variabel som oppdateres til den forrige verdien.
 		
@@ -139,6 +151,8 @@ public class Tabeller {
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 		
+		//som gitt to tabeller tabell1 og tabell2 som parametre, returnerer en ny tabell som er 
+		//sammensetning av de to tabellene gitt med som parameter.
 		
 		int lengde = tabell1.length + tabell2.length;
 		int[] nyTabell = new int[lengde];
@@ -160,10 +174,6 @@ public class Tabeller {
 		
 		return nyTabell;
 		
-	
-		//throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-		//som gitt to tabeller tabell1 og tabell2 som parametre, returnerer en ny tabell som er 
-		//sammensetning av de to tabellene gitt med som parameter.
 		
 		
 		
